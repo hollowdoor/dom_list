@@ -33,12 +33,12 @@ The items parameter is optional.
     <ol id="list"></ol>
     <script>
     var domList = require('dom-list'),
-        ul = domList('#list', function(item){
+        ol = domList('#list', function(item){
             return `<li>${item}</li>`;
         });
 
-    ul.push('John Smith');
-    ul.push('Jane Smith');
+    ol.push('John Smith');
+    ol.push('Jane Smith');
     </script>
 </body>
 </html>
@@ -73,15 +73,15 @@ Visit [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/J
 Removal type methods like `shift`, `splice` or `pop` only produce a plain array so you would have to create a new `dom-list` to use arrays returned by those methods in a new element. To get elements from a `dom-list`, and move them you would do something like this:
 
 ```javascript
-var text = ul.shift();
-var newList = domList('#someotherselector', [text], ul.template);
+var text = ol.shift();
+var newList = domList('#someotherselector', [text], ol.template);
 ```
 
 or you might do this:
 
 ```javascript
-var text = ul.shift();
-var newList = domList('#someotherselector', ul.template);
+var text = ol.shift();
+var newList = domList('#someotherselector', ol.template);
 newList.push(text);
 ```
 
@@ -106,7 +106,7 @@ Any of the above with the exception of flood works just like an array method wit
 flood is a special method that overwrites the entire array contents inside a dom-list. A splice will also work for this.
 
 ```javascript
-ul.flood(['Bobby Jo', 'Billy Jo']);
+ol.flood(['Bobby Jo', 'Billy Jo']);
 ```
 
 Now the previous list looks like this:
@@ -170,7 +170,7 @@ On `dom-list` instances concat works fine with a little magic inside, but if you
 
 ```javascript
 var list = [],
-    newList = [].push.apply(list, li /*A dom-list instance.*/);
+    newList = [].push.apply(list, ol /*A dom-list instance.*/);
 ```
 
 See here [Array.prototype.concat is not generic](http://www.2ality.com/2012/02/concat-not-generic.html) for more about this problem. Be aware the `push.apply` will not work in ie6-8, but who cares about those browsers.
@@ -216,7 +216,7 @@ Returns a [bonzo](https://www.npmjs.com/package/bonzo) instance with all the ele
 If no selector is passed then the top level element of the list is selected, and returned. For instance:
 
 ```javascript
-ul.select().remove();
+ol.select().remove();
 ```
 
 will remove the entire `ul` tag, and it's children from the DOM.
@@ -224,7 +224,7 @@ will remove the entire `ul` tag, and it's children from the DOM.
 Set some css:
 
 ```javascript
-ul.select('li').css({color: 'green'});
+ol.select('li').css({color: 'green'});
 ```
 
 See the [bonzo](https://www.npmjs.com/package/bonzo) lib module to learn more.
