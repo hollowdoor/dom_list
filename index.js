@@ -243,4 +243,6 @@ DomListEx.unescape = function(escapedStr){
     return child ? child.nodeValue : '';
 };
 
+DomListEx.fn = DomList.prototype;
+
 module.exports = DomListEx;

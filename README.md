@@ -237,13 +237,25 @@ Be aware that removing, or adding elements with bonzo instances created by `dom-
 
 Use `dom-list` instance methods to alter the DOM created by `dom-list`. Otherwise you can do other operations like css using bonzo with no consequences as long as you're careful.
 
-Static Properties
------------------
+Static Methods
+--------------
 
 These escape, or unescape a string for HTML respectively.
 
 -	domList.escape(string) -> escaped string
 -	domList.unescape(string) -> unsafe string
+
+Extension
+---------
+
+Extend the prototype of `dom-list` by attaching methods to `domList.fn`. All methods attached this way will be available to all `dom-list` instances.
+
+```javascript
+var domList = require('dom-list');
+domList.fn.hello = function(){
+    console.log('hello extension');
+};
+```
 
 About
 -----
