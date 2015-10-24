@@ -3,6 +3,11 @@ var select = require('select-dom'),
     bonzo = require('bonzo'),
     bean = require('bean');
 
+/*
+git remote add origin https://github.com/hollowdoor/dom_list.git
+git push -u origin master
+*/
+
 bean.setSelectorEngine(select.all);
 
 function DomList(root, items, template){
