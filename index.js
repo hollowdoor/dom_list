@@ -31,6 +31,7 @@ function DomList(root, items, template){
     this.filter = Array.prototype.filter;
     this.forEach = Array.prototype.forEach;
     this.indexOf = Array.prototype.indexOf;
+    this.join = Array.prototype.join;
     this.map = Array.prototype.map;
     this.reduce = Array.prototype.reduce;
     this.reverse = Array.prototype.reverse;

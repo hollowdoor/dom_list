@@ -132,6 +132,7 @@ These methods test, or create without modifying the dom-list contents.
 -	every
 -	filter
 -	forEach
+-	join
 -	map
 -	reduce
 -	reverse
