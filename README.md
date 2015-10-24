@@ -182,6 +182,8 @@ You can *get items by array index* just fine with a `dom-list`, but you probably
 
 Instead use `dom-list` instance methods to modify the `dom-list` array.
 
+Also javascript arrays, and objects are mutable references so be careful to be aware that if you alter any object pushed, or spliced to the `dom-list` because that will alter any old object, or array values.
+
 Special methods
 ---------------
 
