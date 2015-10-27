@@ -23,6 +23,11 @@ function DomList(root, items, template){
     }else{
         this.root = root;
     }
+
+    Object.defineProperty(this, {
+        value: this.root.children
+    });
+
     this.template = template;
 
     //Non-altering type methods

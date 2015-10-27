@@ -248,6 +248,17 @@ These escape, or unescape a string for HTML respectively.
 -	domList.escape(string) -> escaped string
 -	domList.unescape(string) -> unsafe string
 
+Instance Properties
+-------------------
+
+### root
+
+The element set in the first argument of the constructor.
+
+### children
+
+An accessor to the DOM children of root for easy access.
+
 Extension
 ---------
 
