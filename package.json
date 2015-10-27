@@ -1,6 +1,6 @@
 {
     "name": "dom-list",
-    "version": "1.3.3",
+    "version": "1.4.3",
     "description": "Manipulate the DOM like an array.",
     "main": "index.js",
     "directories": {
