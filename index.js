@@ -212,7 +212,26 @@ DomList.prototype = {
         return this;
     },
     get: function(index){
-        return this.root.children[index];
+        var p;
+        if(!isNaN(index)){
+            return this.root.children[index];
+        }
+        if(index.nodeType !== undefined && index.nodeType > 0){
+            try{
+                if(index.parentNode === this.root){
+                    return index;
+                }
+                
+                while(p = index.parentNode){
+                    if(p.parentNode === this.root){
+                        return p;
+                    }
+                }
+                return null;
+            }catch(e){
+                throw new TypeError(index + ' is not a number, or a DOM element.');
+            }
+        }
     }
 };
 

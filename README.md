@@ -214,6 +214,22 @@ Delegate an event on the selector. This is most likely what you'll be doing for 
 
 Remove an event.
 
+### get(index, child)
+
+Get a child of the root element by index. Alternatively get a child by it's children.
+
+If you pass a child the `parentNode` is searched iteratively until the `root` is matched, and you get the top child.
+
+This is good for things like events where you want the element created by the template callback.
+
+```javascript
+//Click any where in a html list item.
+ol.on('click', 'li', function(e){
+    var li = ol.get(e.target));
+    console.log(li); // -> "[object HTMLLIElement]"
+});
+```
+
 ### select(selector)
 
 Returns a [bonzo](https://www.npmjs.com/package/bonzo) instance with all the elements that match the **selector**.
