@@ -192,6 +192,8 @@ Special methods
 
 Iterate the DOM elements using `function` inside a `dom-list` instance. This is different from `forEach` which will iterate the items of a `dom-list`.
 
+The parameters of the `each` callback are the same as a callback used by `Array.prototype.forEach`: **callback(element, index, all)**.
+
 ### update(index, value)
 
 Set a value at the specified index.

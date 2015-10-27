@@ -163,16 +163,16 @@ DomList.prototype = {
     each: function(selector, fn){
         var elements;
         if(fn === undefined && typeof selector === 'function'){
-            for(var i=0; i<this.root.children.length; i++){
-                fn(this.root.children[i], i, this.root.children);
-            }
-            return;
+            fn = selector;
+            selector = null;
+            elements = Array.prototype.slice.call(this.root.children);
+            elements.forEach(fn);
         }else if(typeof fn === 'function' && typeof selector === 'string'){
 
             elements = Array.prototype.slice.call(select.all(selector, this.root));
-            return elements.forEach(fn);
+            elements.forEach(fn);
         }
-
+        return this;
     },
     remove: function(){
         this.root.parentNode.removeChild(this.root);
