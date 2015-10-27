@@ -24,7 +24,7 @@ function DomList(root, items, template){
         this.root = root;
     }
 
-    Object.defineProperty(this, {
+    Object.defineProperty(this, 'children', {
         value: this.root.children
     });
 
