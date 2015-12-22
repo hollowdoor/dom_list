@@ -1,6 +1,6 @@
 {
     "name": "dom-list",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "description": "Manipulate the DOM like an array.",
     "main": "index.js",
     "directories": {
@@ -19,6 +19,6 @@
     },
     "repository" : {
         "type" : "git",
-        "url" : ""
+        "url" : "https://github.com/hollowdoor/dom_list.git"
     }
 }
