@@ -15,8 +15,7 @@
     "bean": "^1.0.15",
     "bonzo": "^2.0.0",
     "dom-from": "^1.0.2",
-    "qwery": "^4.0.0",
-    "select-dom": "0.0.0"
+    "qwery": "^4.0.0"
   },
   "repository": {
     "type": "git",
