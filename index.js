@@ -1,4 +1,4 @@
-var select = require('select-dom'),
+var select = require('./lib/select'),
     domFrom = require('dom-from'),
     bonzo = require('bonzo'),
     bean = require('bean');
@@ -221,7 +221,7 @@ DomList.prototype = {
                 if(index.parentNode === this.root){
                     return index;
                 }
-                
+
                 while(p = index.parentNode){
                     if(p.parentNode === this.root){
                         return p;

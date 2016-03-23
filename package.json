@@ -1,24 +1,25 @@
 {
-    "name": "dom-list",
-    "version": "1.4.4",
-    "description": "Manipulate the DOM like an array.",
-    "main": "index.js",
-    "directories": {
-        "test": "test"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Quentin Engles <hollowdoor99@gmail.com>",
-    "license": "MIT",
-    "dependencies": {
-        "bean": "^1.0.15",
-        "bonzo": "^2.0.0",
-        "dom-from": "^1.0.2",
-        "select-dom": "0.0.0"
-    },
-    "repository" : {
-        "type" : "git",
-        "url" : "https://github.com/hollowdoor/dom_list.git"
-    }
+  "name": "dom-list",
+  "version": "1.4.4",
+  "description": "Manipulate the DOM like an array.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quentin Engles <hollowdoor99@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bean": "^1.0.15",
+    "bonzo": "^2.0.0",
+    "dom-from": "^1.0.2",
+    "qwery": "^4.0.0",
+    "select-dom": "0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hollowdoor/dom_list.git"
+  }
 }
